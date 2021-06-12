@@ -6,28 +6,19 @@ public class VelocityDesructible : MonoBehaviour
 {
     [SerializeField] private float threshold;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Ship"))
         {
             Vector2 vel = collision.gameObject.GetComponent<Rigidbody2D>().velocity;
             if(vel.magnitude > threshold)
             {
                 Destroy(gameObject);
             }
+        }
+        if( collision.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
         }
     }
 }
