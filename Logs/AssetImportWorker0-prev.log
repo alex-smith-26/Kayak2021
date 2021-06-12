@@ -1113,3 +1113,74 @@ System memory in use after: 132.3 MB.
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3999.
 Total: 2.712700 ms (FindLiveObjects: 0.279400 ms CreateObjectMapping: 0.141000 ms MarkObjects: 2.197600 ms  DeleteObjects: 0.093900 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003277 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\aps26\Desktop\GMTK\NewKayak\Kayak\Kayak2021\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\aps26\Desktop\GMTK\NewKayak\Kayak\Kayak2021\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.144 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3371 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 132.2 MB.
+System memory in use after: 132.3 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 4003.
+Total: 3.113400 ms (FindLiveObjects: 0.298700 ms CreateObjectMapping: 0.167300 ms MarkObjects: 2.536500 ms  DeleteObjects: 0.109900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1407.420962 seconds.
+  path: Assets/Prefabs/Kayak.prefab
+  artifactKey: Guid(9e0cd5a2a3c6c8c4a9913c034685e3bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Kayak.prefab using Guid(9e0cd5a2a3c6c8c4a9913c034685e3bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a85e5d456f43f30f9f0eb64cf51ff4ae') in 0.068315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.786015 seconds.
+  path: Assets/Prefabs/Kayak.prefab
+  artifactKey: Guid(9e0cd5a2a3c6c8c4a9913c034685e3bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Kayak.prefab using Guid(9e0cd5a2a3c6c8c4a9913c034685e3bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6368a3639badf6d9af6e87d5b0a0e4cb') in 0.010162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.997714 seconds.
+  path: Assets/Prefabs/Bullet.prefab
+  artifactKey: Guid(8b9cc822947b68c499df8d906bddf93c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bullet.prefab using Guid(8b9cc822947b68c499df8d906bddf93c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2553531b081c1fd22f48ac665edce02') in 0.008388 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003090 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\aps26\Desktop\GMTK\NewKayak\Kayak\Kayak2021\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\aps26\Desktop\GMTK\NewKayak\Kayak\Kayak2021\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.024 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3371 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 132.2 MB.
+System memory in use after: 132.3 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 4008.
+Total: 2.603600 ms (FindLiveObjects: 0.258500 ms CreateObjectMapping: 0.143100 ms MarkObjects: 2.041500 ms  DeleteObjects: 0.159600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 659.923524 seconds.
+  path: Assets/Prefabs/DestructableWall.prefab
+  artifactKey: Guid(196ac6d9a98f9be49b68dc99edc6ac14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DestructableWall.prefab using Guid(196ac6d9a98f9be49b68dc99edc6ac14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8979d018ecf3a153e1f342b3dd52fa8') in 0.068226 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
