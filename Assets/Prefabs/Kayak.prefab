@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 956365137403491791}
   - component: {fileID: 956365137403491789}
   - component: {fileID: 956365137403491788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Kayak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,6 +128,11 @@ MonoBehaviour:
   bottomLeftThruster: {fileID: 4407350291622555822}
   bottomRightThruster: {fileID: 3993045211841836462}
   bullet: {fileID: 0}
+  fireCD: 0.3
+  topLeftFire: 0
+  topRightFire: 0
+  bottomLeftFire: 0
+  bottomRightFire: 0
 --- !u!1 &3993045211841836462
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8894393855739937039}
   - component: {fileID: 3597284380623968707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7324495187244954086}
   - component: {fileID: 1144354005727837109}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5144830698760057464}
   - component: {fileID: 3972795728403534714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8507787364898743385}
   - component: {fileID: 5777155039350758046}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TopRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
