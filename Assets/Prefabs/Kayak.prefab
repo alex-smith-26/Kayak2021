@@ -127,6 +127,7 @@ MonoBehaviour:
   topRightThruster: {fileID: 7714878632561540882}
   bottomLeftThruster: {fileID: 4407350291622555822}
   bottomRightThruster: {fileID: 3993045211841836462}
+  bullet: {fileID: 0}
 --- !u!1 &3993045211841836462
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3993045211841836462}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.06, y: -0.084, z: 0}
+  m_LocalPosition: {x: 0.06, y: -0.085, z: 0}
   m_LocalScale: {x: 0.2235928, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 956365137403491790}
@@ -318,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5191878975693162146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0.102, z: 0}
+  m_LocalPosition: {x: -0.1, y: 0.1, z: 0}
   m_LocalScale: {x: 0.2235928, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 956365137403491790}
