@@ -137,5 +137,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherPlayer: {fileID: 0}
   p: 1
-  PullPower: 5
-  PushPower: 5
+  PullPower: 20
+  PushPower: 20
