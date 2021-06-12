@@ -6,6 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 2b1ba2d0c53f27d4b83d1d24f9454592
+  - enabled: 1
     path: Assets/Scenes/KayakLevel1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/MAGNET.unity
+    guid: a83a27e28b91346c7924553e47d69cc7
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: e858bf2d5bed53a4eba47f89601b0aa9, type: 2}
