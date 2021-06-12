@@ -30,7 +30,7 @@ public class PlayerMover : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                pull2Other(otherPlayer);
+                pull2Other();
             }
 
             if (Input.GetKey(KeyCode.Q))
@@ -42,7 +42,7 @@ public class PlayerMover : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.O))
             {
-                pull2Other(otherPlayer);
+                pull2Other();
             }
 
             if (Input.GetKey(KeyCode.U))
@@ -53,9 +53,9 @@ public class PlayerMover : MonoBehaviour
         
     }
 
-    public void pull2Other(GameObject other)
+    public void pull2Other()
     {
-        Vector2 diff = other.transform.position - transform.position;
+        Vector2 diff = otherPlayer.transform.position - transform.position;
         diff /= diff.sqrMagnitude;
 
         rigidb.AddForce(diff * PullPower);
