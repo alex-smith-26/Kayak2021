@@ -714,21 +714,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagnetP2
       objectReference: {fileID: 0}
-    - target: {fileID: 3459652438858200335, guid: fdf0118da106045b4888ade4bad24078, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 8833276711355866766, guid: fdf0118da106045b4888ade4bad24078, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8833276711355866766, guid: fdf0118da106045b4888ade4bad24078, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.37
+      value: -2.47
       objectReference: {fileID: 0}
     - target: {fileID: 8833276711355866766, guid: fdf0118da106045b4888ade4bad24078, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.46
+      value: -0.55
       objectReference: {fileID: 0}
     - target: {fileID: 8833276711355866766, guid: fdf0118da106045b4888ade4bad24078, type: 3}
       propertyPath: m_LocalPosition.z
@@ -835,10 +831,6 @@ PrefabInstance:
     - target: {fileID: 8471436585287864137, guid: bd50fd1a8c0c5401ca44e5d0eddfaec5, type: 3}
       propertyPath: m_Name
       value: MagnetP1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8471436585287864137, guid: bd50fd1a8c0c5401ca44e5d0eddfaec5, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd50fd1a8c0c5401ca44e5d0eddfaec5, type: 3}

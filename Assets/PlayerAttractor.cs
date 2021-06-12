@@ -8,6 +8,8 @@ public class PlayerAttractor : MonoBehaviour
 
     private List<GameObject> players;
 
+    private float PullPower = 15f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +21,16 @@ public class PlayerAttractor : MonoBehaviour
     {
         foreach(GameObject g in players)
         {
-            g.GetComponent<PlayerMover>().pull2Other(gameObject);
+            Vector2 diff = transform.position - g.transform.position;
+            diff /= diff.sqrMagnitude;
+
+            g.GetComponent<Rigidbody2D>().AddForce(diff * PullPower);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Ship"))
         {
             players.Add(collision.gameObject);
         }
@@ -33,7 +38,7 @@ public class PlayerAttractor : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Ship"))
         {
             players.Remove(collision.gameObject);
         }
