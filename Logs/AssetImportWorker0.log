@@ -715,3 +715,30 @@ System memory in use after: 132.2 MB.
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3910.
 Total: 3.271600 ms (FindLiveObjects: 0.330600 ms CreateObjectMapping: 0.193100 ms MarkObjects: 2.648000 ms  DeleteObjects: 0.098400 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003213 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\aps26\Desktop\GMTK\NewKayak\Kayak\Kayak2021\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\aps26\Desktop\GMTK\NewKayak\Kayak\Kayak2021\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.030 seconds
+Platform modules already initialized, skipping
+Shader 'TextMeshPro/Distance Field Overlay': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+Shader 'TextMeshPro/Distance Field SSD': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3388 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 134.1 MB.
+System memory in use after: 133.6 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 3915.
+Total: 2.882800 ms (FindLiveObjects: 0.276500 ms CreateObjectMapping: 0.144800 ms MarkObjects: 2.164100 ms  DeleteObjects: 0.296500 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
