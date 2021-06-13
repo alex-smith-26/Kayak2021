@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventSystemHelper : MonoBehaviour {
+public class InputManagerHelper : MonoBehaviour {
 
-	public static EventSystemHelper instance;
+	public static InputManagerHelper instance;
 
 
 	// init

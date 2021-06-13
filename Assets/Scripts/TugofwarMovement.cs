@@ -24,7 +24,18 @@ public class TugofwarMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If controller detected, use left stick directly
+        //if (PlayerInputController.player_propels[0].magnitude > 0.01f) {
+        //    Vector3 look_direction = PlayerInputController.player_propels[0];
+        //    leftThruster.transform.LookAt(look_direction + leftThruster.transform.position, Vector3.forward);
+        //}
 
+        //if (PlayerInputController.player_propels[1].magnitude > 0.01f) {
+        //    Vector3 look_direction = PlayerInputController.player_propels[1];
+        //    rightThruster.transform.LookAt(look_direction + rightThruster.transform.position, Vector3.forward);
+        //}
+
+        // Keyboard input
         if (Input.GetKey(KeyCode.W))
         {
             rb2D.AddForceAtPosition(thrust * -leftThruster.transform.up, leftThruster.transform.position);
