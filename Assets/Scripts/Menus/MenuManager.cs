@@ -53,10 +53,11 @@ namespace UnityCore
 
 			public void ShowLevelSelect()
 			{
-				MainMenu.SetActive(false);
-				ShipSelect.SetActive(false);
-				LevelSelect.SetActive(true);
-				Credits.SetActive(false);
+				SelectLevel("KayakLevel1");
+				//MainMenu.SetActive(false);
+				//ShipSelect.SetActive(false);
+				//LevelSelect.SetActive(true);
+				//Credits.SetActive(false);
 			}
 
 			public void ShowCredits()
