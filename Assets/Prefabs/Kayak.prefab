@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ebcc82eb566f7b44aa1eeb518b3060a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 0.4
+  thrust: 0.5
   topLeftThruster: {fileID: 5191878975693162146}
   topRightThruster: {fileID: 7714878632561540882}
   bottomLeftThruster: {fileID: 4407350291622555822}
