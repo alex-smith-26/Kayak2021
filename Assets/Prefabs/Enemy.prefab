@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4888304071785283234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.4612136, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -164,9 +164,17 @@ MonoBehaviour:
   hasAggroOnPlayer: 0
   hasSightlineOnPlayer: 0
   nodes: []
+<<<<<<< HEAD
+  player: {fileID: 0}
+  bullet: {fileID: 0}
+  type: 0
+  rotationSpeed: 0
+  speed: 0
+=======
   bullet: {fileID: 427454635210537055, guid: 8b9cc822947b68c499df8d906bddf93c, type: 3}
   type: 0
   rotationSpeed: 0.5
   speed: 3
+>>>>>>> bc73624ea26c0a52804af29a5e45f1d4189537dc
   fireCooldown: 0.75
   fire: 0
