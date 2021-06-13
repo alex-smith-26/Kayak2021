@@ -355,7 +355,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2066275957416798777, guid: ec8f6242374d34c0a8771328e742cca7, type: 3}
       propertyPath: PullPower
-      value: 2
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2066275958395297419, guid: ec8f6242374d34c0a8771328e742cca7, type: 3}
       propertyPath: m_RootOrder
