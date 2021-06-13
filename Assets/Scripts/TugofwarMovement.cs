@@ -38,7 +38,7 @@ public class TugofwarMovement : MonoBehaviour
         // Keyboard input
         if (Input.GetKey(KeyCode.W))
         {
-            rb2D.AddForceAtPosition(thrust * -leftThruster.transform.up, leftThruster.transform.position);
+            rb2D.AddForceAtPosition(thrust * leftThruster.transform.up, leftThruster.transform.position);
             leftThruster.GetComponent<SpriteRenderer>().color = new Color(0, 255, 0);
         }
         else
@@ -58,7 +58,7 @@ public class TugofwarMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            rb2D.AddForceAtPosition(thrust * -rightThruster.transform.up, rightThruster.transform.position);
+            rb2D.AddForceAtPosition(thrust * rightThruster.transform.up, rightThruster.transform.position);
             rightThruster.GetComponent<SpriteRenderer>().color = new Color(0, 255, 0);
         }
         else

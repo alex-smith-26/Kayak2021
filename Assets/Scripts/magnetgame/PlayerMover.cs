@@ -69,28 +69,36 @@ public class PlayerMover : MonoBehaviour
 
     public void pull2Other()
     {
-        Vector2 diff = otherPlayer.transform.position - transform.position;
-        diff /= diff.sqrMagnitude;
-        var max = Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y));
-        if (max < floor)
+        if(otherPlayer)
         {
-            diff *= floor / max;
-        }
+            Vector2 diff = otherPlayer.transform.position - transform.position;
+            diff /= diff.sqrMagnitude;
+            var max = Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y));
+            if (max < floor)
+            {
+                diff *= floor / max;
+            }
 
-        rigidb.AddForce(diff * PullPower);
+            rigidb.AddForce(diff * PullPower);
+        }
+        
     }
 
     public void push()
     {
-        Vector2 diff = transform.position - otherPlayer.transform.position;
-        diff /= diff.sqrMagnitude;
-
-        var max = Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y));
-        if (max < floor/2f)
+        if(otherPlayer)
         {
-            diff *= floor/2f / max;
-        }
+            Vector2 diff = transform.position - otherPlayer.transform.position;
+            diff /= diff.sqrMagnitude;
 
-        rigidb.AddForce(diff * PushPower);
+            var max = Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y));
+            if (max < floor / 2f)
+            {
+                diff *= floor / 2f / max;
+            }
+
+            rigidb.AddForce(diff * PushPower);
+        }
+        
     }
 }
