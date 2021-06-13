@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAI_COPY : MonoBehaviour
 {
     public bool hasAggroOnPlayer = false;
     public bool hasSightlineOnPlayer = false;
