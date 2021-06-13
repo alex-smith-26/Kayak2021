@@ -137,9 +137,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 64191555}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 719b47931787b4249b578de84dbf9e16, type: 3}
+  m_Script: {fileID: 11500000, guid: 78d048d043c951244866c1cf4da24b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: Scenes/Kayaklevels/KayakLevel2
+  hitGoal: 0
 --- !u!1001 &331881530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -165,7 +167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: 1dfee178a012f7f41b2badef6122772f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.49
+      value: 6.52
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: 1dfee178a012f7f41b2badef6122772f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -647,8 +649,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723206071}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.85, y: 2.05, z: 7.863867}
-  m_LocalScale: {x: 6.3178606, y: 0.71470237, z: 1}
+  m_LocalPosition: {x: -3.1745, y: 2.05, z: 7.863867}
+  m_LocalScale: {x: 7.6686187, y: 0.71470237, z: 1}
   m_Children: []
   m_Father: {fileID: 467724307}
   m_RootOrder: 7
@@ -917,7 +919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: 1dfee178a012f7f41b2badef6122772f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.95
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: 1dfee178a012f7f41b2badef6122772f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1154,8 +1156,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567628024}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.86, y: -0.35, z: 7.863867}
-  m_LocalScale: {x: 6.3178606, y: 0.71470237, z: 1}
+  m_LocalPosition: {x: -3.1845, y: -0.35, z: 7.863867}
+  m_LocalScale: {x: 7.6686187, y: 0.71470237, z: 1}
   m_Children: []
   m_Father: {fileID: 467724307}
   m_RootOrder: 8
@@ -1579,6 +1581,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7914426162641027730, guid: ab1066079ebb95d4b98a11650c0f7176, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914426162641027731, guid: ab1066079ebb95d4b98a11650c0f7176, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7914426162641027743, guid: ab1066079ebb95d4b98a11650c0f7176, type: 3}
