@@ -9,9 +9,14 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        print("collided with something with tag " + col.gameObject.tag);
         if (col.gameObject.tag == "Wall")
         {
-            Destroy(this);
+            Destroy(gameObject);
+        }
+        if (col.gameObject.tag == "Enemy")
+        {
+            Destroy(col.gameObject);
         }
     }
 
