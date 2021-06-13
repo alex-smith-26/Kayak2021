@@ -24,6 +24,12 @@ public class PlayerAttractor : MonoBehaviour
             Vector2 diff = transform.position - g.transform.position;
             diff /= diff.sqrMagnitude;
 
+            var max = Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y));
+            if (max < 0.4f)
+            {
+                diff *= 0.4f / max;
+            }
+
             g.GetComponent<Rigidbody2D>().AddForce(diff * PullPower);
         }
     }
