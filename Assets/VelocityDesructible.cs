@@ -6,6 +6,8 @@ public class VelocityDesructible : MonoBehaviour
 {
     [SerializeField] private float threshold;
 
+    [HideInInspector] public TargetTracker tracker;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ship"))
@@ -13,12 +15,21 @@ public class VelocityDesructible : MonoBehaviour
             Vector2 vel = collision.gameObject.GetComponent<Rigidbody2D>().velocity;
             if(vel.magnitude > threshold)
             {
-                Destroy(gameObject);
+                die();
             }
         }
         if( collision.gameObject.CompareTag("Bullet"))
         {
-            Destroy(gameObject);
+            die();
         }
+    }
+
+    public void die()
+    {
+        if(tracker)
+        {
+            tracker.NoteDeath();
+        }
+        Destroy(gameObject);
     }
 }
