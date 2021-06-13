@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5127384102362280650}
   m_Layer: 6
   m_Name: Kayak
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
