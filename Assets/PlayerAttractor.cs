@@ -8,7 +8,7 @@ public class PlayerAttractor : MonoBehaviour
 
     private List<GameObject> players;
 
-    private float PullPower = 12f;
+    [SerializeField] private float PullPower = 12f;
 
     // Start is called before the first frame update
     void Start()
