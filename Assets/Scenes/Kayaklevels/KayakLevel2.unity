@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d048d043c951244866c1cf4da24b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: Scenes/Kayaklevels/KayakLevel3
+  nextLevel: MagnetLevel1
   hitGoal: 0
 --- !u!1001 &220884631
 PrefabInstance:
@@ -1643,7 +1643,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
