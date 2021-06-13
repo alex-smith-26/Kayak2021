@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kayaklevels/KayakLevel2.unity
     guid: a44cc3646d7e21d4cb8c39dc95b7afdd
+  - enabled: 1
+    path: Assets/Scenes/You Win Screen.unity
+    guid: dadda26e1fcfa144bb5e0ff05a4fdf66
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e858bf2d5bed53a4eba47f89601b0aa9, type: 2}
