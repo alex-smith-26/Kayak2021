@@ -137,9 +137,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 64191555}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 719b47931787b4249b578de84dbf9e16, type: 3}
+  m_Script: {fileID: 11500000, guid: 78d048d043c951244866c1cf4da24b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: Scenes/Kayaklevels/KayakLevel4
+  hitGoal: 0
 --- !u!1 &399803842
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,15 +331,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: 196ac6d9a98f9be49b68dc99edc6ac14, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.015539
+      value: 2.6083224
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: 196ac6d9a98f9be49b68dc99edc6ac14, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.6648235
+      value: -3.61
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: 196ac6d9a98f9be49b68dc99edc6ac14, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8518
+      value: 0.88
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: 196ac6d9a98f9be49b68dc99edc6ac14, type: 3}
       propertyPath: m_LocalPosition.z
@@ -524,7 +526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: bd7da6db2f8379841b01ea2cdea12335, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.9238973
+      value: 6.24951
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: bd7da6db2f8379841b01ea2cdea12335, type: 3}
       propertyPath: m_LocalScale.y
@@ -532,7 +534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: bd7da6db2f8379841b01ea2cdea12335, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.126976
+      value: 9.464
       objectReference: {fileID: 0}
     - target: {fileID: 8418351088446014833, guid: bd7da6db2f8379841b01ea2cdea12335, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1637,6 +1639,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7914426162641027730, guid: ab1066079ebb95d4b98a11650c0f7176, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914426162641027731, guid: ab1066079ebb95d4b98a11650c0f7176, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7914426162641027743, guid: ab1066079ebb95d4b98a11650c0f7176, type: 3}
