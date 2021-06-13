@@ -8,7 +8,8 @@ public class EnemyAI : MonoBehaviour
     public bool hasSightlineOnPlayer = false;
     public GameObject[] nodes;
     private GameObject nextNode;
-    public GameObject player;
+    private GameObject[] players = new GameObject[0];
+    private GameObject current_target_player;
     [SerializeField] public enum AIType {Chase, Kamikaze, Cautious, Patrol};
     [SerializeField] public GameObject bullet;
     public AIType type;
@@ -27,17 +28,17 @@ public class EnemyAI : MonoBehaviour
         // Convert the vector between enemy and desired target to a signed angle
         float angleToTarget = Vector2.SignedAngle(new Vector2(0, 1), (go.transform.position - transform.position));
         // Sanity check - make sure the angle through which the enemy will rotate is less than 180 degrees
-        if (Mathf.Abs(rb2d.rotation - angleToTarget) < 180)
+        if (Mathf.Abs(rb2d.rotation - angleToTarget) < 180.0f)
         {
-            rb2d.rotation -= (rb2d.rotation - angleToTarget) * (rotationSpeed / 100);
+            rb2d.rotation -= (rb2d.rotation - angleToTarget) * (rotationSpeed / 100.0f);
         }
-        else if (rb2d.rotation - angleToTarget < -180)
+        else if (rb2d.rotation - angleToTarget < -180.0f)
         {
-            rb2d.rotation -= (360 + (rb2d.rotation - angleToTarget)) * (rotationSpeed / 100);
+            rb2d.rotation -= (360.0f + (rb2d.rotation - angleToTarget)) * (rotationSpeed / 100.0f);
         }
-        else if (rb2d.rotation - angleToTarget > 180)
+        else if (rb2d.rotation - angleToTarget > 180.0f)
         {
-            rb2d.rotation -= (rb2d.rotation - (angleToTarget + 360)) * (rotationSpeed / 100);
+            rb2d.rotation -= (rb2d.rotation - (angleToTarget + 360.0f)) * (rotationSpeed / 100.0f);
         }
     }
 
@@ -54,52 +55,63 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Check for LOS to the player's position
-        RaycastHit2D lineOfSight = Physics2D.Raycast(transform.position, (player.transform.position-transform.position));
-        Debug.DrawLine(transform.position, player.transform.position, Color.red);
-        if(lineOfSight.collider != null)
-        {
-            // If player is visible, change boolean flags to match and update player's last known location
-            if(lineOfSight.collider.gameObject == player)
-            {
-                hasSightlineOnPlayer = true;
-                hasAggroOnPlayer = true;
-                lastKnownPlayerLoc = player.transform.position;
-            }
-            // If player can't be seen, change boolean flag and bring enemy to a stop
-            else
-            {
-                hasSightlineOnPlayer = false;
-                rb2d.velocity -= rb2d.velocity * .75f;
+        // first clear any invalid ships from the list
+        List<GameObject> ships_to_keep = new List<GameObject>();
+        for (int i=0; i < players.Length; i++) {
+            if (players[i]) {
+                ships_to_keep.Add(players[i]);
+			}
+		}
+        players = ships_to_keep.ToArray();
+
+        // If it's empty, find the ships
+        if (players.Length == 0) {
+            players = GameObject.FindGameObjectsWithTag("Ship");
+            if (players.Length == 0) {
+                Debug.LogError("Can't find a Ship in the scene");
+                return;
+			}
+		}
+
+        hasSightlineOnPlayer = false;
+
+        if (current_target_player) {
+            try_to_find_player(current_target_player);
+		}
+
+        if (!hasSightlineOnPlayer) {
+            current_target_player = null;
+            foreach (GameObject player in players) {
+                bool found = try_to_find_player(player);
+                if (found) {
+                    break;
+				}
             }
         }
-        if (hasAggroOnPlayer)
-        {
-            if (hasSightlineOnPlayer)
-            {
-                switch (type)
-                {
-                    case AIType.Chase:
-                        {
-                            FaceTowards(player);
-                            rb2d.velocity = -((transform.position - player.transform.position).normalized) * speed;
-                            break;
-                        }
-                    case AIType.Cautious:
-                        {
 
+        if (!hasSightlineOnPlayer) {
+            rb2d.velocity -= rb2d.velocity * .75f;
+        }
+
+        if (hasAggroOnPlayer) {
+            if (hasSightlineOnPlayer) {
+                switch (type) {
+                    case AIType.Chase: {
+							FaceTowards(current_target_player);
+							rb2d.velocity = -((transform.position - current_target_player.transform.position).normalized) * speed;
+							break;
+                        }
+                    case AIType.Cautious: {
                             break;
                         }
-                    case AIType.Kamikaze:
-                        {
-                            FaceTowards(player);
-                            rb2d.velocity = -((transform.position - player.transform.position).normalized) * speed;
+                    case AIType.Kamikaze: {
+                            FaceTowards(current_target_player);
+                            rb2d.velocity = ((current_target_player.transform.position - transform.position).normalized) * speed;
                             break;
                         }
-                    case AIType.Patrol:
-                        {
-                            FaceTowards(player);
-                            rb2d.velocity = -((transform.position - player.transform.position).normalized) * speed;
+                    case AIType.Patrol: {
+                            FaceTowards(current_target_player);
+                            rb2d.velocity = ((current_target_player.transform.position - transform.position).normalized) * speed;
                             break;
                         }
                 }
@@ -163,15 +175,34 @@ public class EnemyAI : MonoBehaviour
                 else
                 {
                     nodeIndex++;
-                    if (nodeIndex == nodes.Length)
-                    {
+                    if (nodeIndex == nodes.Length) {
                         nodeIndex = 0;
                     }
                     nextNode = nodes[nodeIndex];
                 }
             }
         }
-        
-        
+    }
+
+    // Raycasts for the given player. Aggros on them and returns true iff found. 
+    private bool try_to_find_player(GameObject player) {
+		// Check for LOS to the player's position
+		RaycastHit2D lineOfSight = Physics2D.Raycast(transform.position, (player.transform.position - transform.position));
+        //Debug.DrawLine(transform.position, player.transform.position, Color.red);
+        if (lineOfSight.collider != null) {
+			// If player is visible, change boolean flags to match and update player's last known location
+			if (lineOfSight.collider.gameObject == player) {
+                hasSightlineOnPlayer = true;
+                hasAggroOnPlayer = true;
+                current_target_player = player;
+				lastKnownPlayerLoc = player.transform.position;
+				return true;
+            } else {
+				// If player can't be seen, change boolean flag and bring enemy to a stop
+				//hasSightlineOnPlayer = false;
+				//rb2d.velocity -= rb2d.velocity * .75f;
+			}
+		}
+        return false;
     }
 }

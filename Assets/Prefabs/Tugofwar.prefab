@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4101053149707400866}
   - component: {fileID: 4101053149707400877}
   - component: {fileID: 4101053149707400876}
-  - component: {fileID: 4101053149707400879}
   - component: {fileID: 4101053149707400878}
+  - component: {fileID: 2969206323432280385}
   m_Layer: 0
   m_Name: Tugofwar
   m_TagString: Ship
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4101053149707400873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 9.6861, y: 9.6861, z: 9.6861}
+  m_LocalPosition: {x: 0.1843, y: -0.1843, z: 0}
+  m_LocalScale: {x: 6.5, y: 6.5, z: 6.5}
   m_Children:
   - {fileID: 4101053150034565548}
   - {fileID: 4101053151312878914}
@@ -110,29 +110,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4101053149707400879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4101053149707400873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ebcc82eb566f7b44aa1eeb518b3060a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrust: 0.5
-  topLeftThruster: {fileID: 0}
-  topRightThruster: {fileID: 0}
-  bottomLeftThruster: {fileID: 0}
-  bottomRightThruster: {fileID: 0}
-  bullet: {fileID: 0}
-  fireCD: 0.3
-  topLeftFire: 0
-  topRightFire: 0
-  bottomLeftFire: 0
-  bottomRightFire: 0
 --- !u!61 &4101053149707400878
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,6 +136,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1479024, y: 0.015034849}
   m_EdgeRadius: 0
+--- !u!114 &2969206323432280385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4101053149707400873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5cf31d65a5056f46b826b3ff17bb3f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 0.15
+  leftThruster: {fileID: 4101053151312878924}
+  rightThruster: {fileID: 4101053150034565550}
 --- !u!1 &4101053149943963341
 GameObject:
   m_ObjectHideFlags: 0

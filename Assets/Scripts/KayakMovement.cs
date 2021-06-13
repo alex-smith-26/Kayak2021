@@ -34,7 +34,7 @@ public class KayakMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            print("W key was pressed");
+            //print("W key was pressed");
 
             rb2D.AddForceAtPosition(thrust * -topLeftThruster.transform.up, topLeftThruster.transform.position);
             topLeftThruster.GetComponent<SpriteRenderer>().color = new Color(0, 255, 0);

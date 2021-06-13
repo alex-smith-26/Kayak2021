@@ -15,6 +15,7 @@ public class KayakEndGoal : MonoBehaviour
             if (!hitGoal)
             {
                 hitGoal = true;
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 255, 0);
                 StartCoroutine("NextLevelScene");
                 print("level goal");
             }
