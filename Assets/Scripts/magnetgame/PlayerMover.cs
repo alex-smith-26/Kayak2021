@@ -11,16 +11,26 @@ public class PlayerMover : MonoBehaviour
 
     public player p;
 
-    public float PullPower = 5f;
+    private float PullPower = 20f;
 
-    public float PushPower = 5f;
+    private float PushPower = 20f;
 
     private Rigidbody2D rigidb;
+
+    private float floor = 0.5f;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidb = GetComponent<Rigidbody2D>();
+
+        if(!otherPlayer)
+        {
+            if (p == player.p1)
+                otherPlayer = GameObject.Find("MagnetP2");
+            else
+                otherPlayer = GameObject.Find("MagnetP1");
+        }
     }
 
     // Update is called once per frame
@@ -57,6 +67,11 @@ public class PlayerMover : MonoBehaviour
     {
         Vector2 diff = otherPlayer.transform.position - transform.position;
         diff /= diff.sqrMagnitude;
+        var max = Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y));
+        if (max < floor)
+        {
+            diff *= floor / max;
+        }
 
         rigidb.AddForce(diff * PullPower);
     }
@@ -65,6 +80,12 @@ public class PlayerMover : MonoBehaviour
     {
         Vector2 diff = transform.position - otherPlayer.transform.position;
         diff /= diff.sqrMagnitude;
+
+        var max = Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y));
+        if (max < floor/2f)
+        {
+            diff *= floor/2f / max;
+        }
 
         rigidb.AddForce(diff * PushPower);
     }

@@ -161,6 +161,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc4b987b4fcea54393647d3b3d9a3ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  rotationFollowStrength: 0
-  speed: 0
+  hasAggroOnPlayer: 0
+  hasSightlineOnPlayer: 0
+  nodes: []
+  bullet: {fileID: 427454635210537055, guid: 8b9cc822947b68c499df8d906bddf93c, type: 3}
+  type: 0
+  rotationSpeed: 0.5
+  speed: 3
+  fireCooldown: 0.75
+  fire: 0
