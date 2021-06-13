@@ -11,7 +11,9 @@ public class DamageWall : MonoBehaviour
         if (col.gameObject.tag == "Ship")
         {
             Destroy(col.gameObject);
-            StartCoroutine("ResetScene");
+            if (!ShipSpawner.instance) {
+                StartCoroutine("ResetScene");
+            }
         }
     }
 

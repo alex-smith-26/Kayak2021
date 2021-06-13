@@ -18,6 +18,9 @@ public class ShipSpawner : MonoBehaviour {
 	public GameObject magnet_prefab_1;
 	public GameObject magnet_prefab_2;
 
+	private const float DEFAULT_RESET_TIME = 3.5f;
+	private float resetTimeRemaining = DEFAULT_RESET_TIME;
+
 
 	// init
 	void Awake() {
@@ -39,17 +42,15 @@ public class ShipSpawner : MonoBehaviour {
 		// Find its position in the level, delete the existing ship(s), move the new one(s) there.
 		GameObject[] ships = GameObject.FindGameObjectsWithTag("Ship");
 		bool needToReplace = true;
-		Vector3 position1ToSpawn = new Vector3();
-		Vector3 position2ToSpawn = new Vector3();
+		Vector3 positionToSpawn = new Vector3();
 
 		if (ships.Length == 1) {
-			position1ToSpawn = ships[0].transform.position;
+			positionToSpawn = ships[0].transform.position;
 		} else if (ships.Length == 2) {
 			if (currentShipType == ShipType.Magnet) {
 				needToReplace = false;
 			} else {
-				position1ToSpawn = ships[0].transform.position;
-				position2ToSpawn = ships[1].transform.position;
+				positionToSpawn = ships[0].transform.position;
 			}
 		} else {
 			Debug.LogError("No ships found in non-main menu scene (determined by build index)");
@@ -63,16 +64,38 @@ public class ShipSpawner : MonoBehaviour {
 
 			// Spawn the new ship(s)
 			if (currentShipType == ShipType.Kayak) {
-				Instantiate(kayak_prefab, position1ToSpawn, kayak_prefab.transform.rotation);
+				Instantiate(kayak_prefab, positionToSpawn, kayak_prefab.transform.rotation);
 			} else if (currentShipType == ShipType.Tug_of_War) {
-				Instantiate(tug_of_war_prefab, position1ToSpawn, tug_of_war_prefab.transform.rotation);
+				Instantiate(tug_of_war_prefab, positionToSpawn, tug_of_war_prefab.transform.rotation);
 			} else if (currentShipType == ShipType.Magnet) {
-				Instantiate(magnet_prefab_1, position1ToSpawn, magnet_prefab_1.transform.rotation);
-				Instantiate(magnet_prefab_2, position2ToSpawn, magnet_prefab_2.transform.rotation);
+				Vector3 offset = new Vector3(0.5f, 0, 0);
+				Instantiate(magnet_prefab_1, positionToSpawn - offset, magnet_prefab_1.transform.rotation);
+				Instantiate(magnet_prefab_2, positionToSpawn + offset, magnet_prefab_2.transform.rotation);
 			} else {
 				Debug.LogError("No ship type provided for ShipType: " + currentShipType);
 			}
 		}
 	}
 
+	// Every frame, check how many ships there are.
+	private void Update() {
+		if (SceneManager.GetActiveScene().buildIndex == 0) {
+			return;
+		}
+
+		GameObject[] ships = GameObject.FindGameObjectsWithTag("Ship");
+		if ((currentShipType == ShipType.Magnet && ships.Length < 2) ||
+			(currentShipType != ShipType.Magnet && ships.Length < 1)) {
+			resetTimeRemaining -= Time.deltaTime;
+			if (resetTimeRemaining <= 0) {
+				resetLevel();
+			}
+		}
+	}
+
+	// Resets the level by reloading the scene
+	private void resetLevel() {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		resetTimeRemaining = DEFAULT_RESET_TIME;
+	}
 }
