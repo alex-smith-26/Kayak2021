@@ -4,16 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public enum ShipType { Kayak, Tug_of_War, Magnets }
-
-
 public class MenuManager : MonoBehaviour {
 
 	public GameObject MainMenu;
 	public GameObject ShipSelect;
 	public GameObject LevelSelect;
-
-	public static ShipType currentShipType;
+	public GameObject Credits;
 
 
 	// Init
@@ -35,28 +31,41 @@ public class MenuManager : MonoBehaviour {
 		MainMenu.SetActive(true);
 		ShipSelect.SetActive(false);
 		LevelSelect.SetActive(false);
+		Credits.SetActive(false);
 	}
 
 	public void ShowShipSelect() {
 		MainMenu.SetActive(false);
 		ShipSelect.SetActive(true);
 		LevelSelect.SetActive(false);
+		Credits.SetActive(false);
 	}
 
 	public void ShowLevelSelect() {
 		MainMenu.SetActive(false);
 		ShipSelect.SetActive(false);
 		LevelSelect.SetActive(true);
+		Credits.SetActive(false);
+	}
+
+	public void ShowCredits() {
+		MainMenu.SetActive(false);
+		ShipSelect.SetActive(false);
+		LevelSelect.SetActive(false);
+		Credits.SetActive(true);
 	}
 
 	// Set a certain type of ship
 	public void SelectShip(int shipType) {
-		currentShipType = (ShipType)shipType;
+		ShipSpawner.currentShipType = (ShipType)shipType;
 		ShowLevelSelect();
 	}
 
 	// Select a certain level to load
 	public void SelectLevel(int sceneIndex) {
 		SceneManager.LoadScene(sceneIndex);
+	}
+	public void SelectLevel(string sceneName) {
+		SceneManager.LoadScene(sceneName);
 	}
 }

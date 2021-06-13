@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4101053149707400878}
   m_Layer: 0
   m_Name: Tugofwar
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,8 +123,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrust: 0.5
-  leftThruster: {fileID: 4101053151312878924}
-  rightThruster: {fileID: 4101053150034565550}
+  topLeftThruster: {fileID: 0}
+  topRightThruster: {fileID: 0}
+  bottomLeftThruster: {fileID: 0}
+  bottomRightThruster: {fileID: 0}
+  bullet: {fileID: 0}
+  fireCD: 0.3
+  topLeftFire: 0
+  topRightFire: 0
+  bottomLeftFire: 0
+  bottomRightFire: 0
 --- !u!61 &4101053149707400878
 BoxCollider2D:
   m_ObjectHideFlags: 0
