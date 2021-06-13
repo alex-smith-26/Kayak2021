@@ -2837,6 +2837,10 @@ PrefabInstance:
       propertyPath: tracks.Array.data[0].audio.Array.data[0].clip
       value: 
       objectReference: {fileID: 8300000, guid: b7092ab00fb1449049b9d3e802556f3c, type: 3}
+    - target: {fileID: 8010824800680413046, guid: 0780ff1cd71d0448897cd0f61a2f75ed, type: 3}
+      propertyPath: tracks.Array.data[0].audio.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 784475f46d26a4602ac2f003b6d8305a, type: 3}
     - target: {fileID: 8010824800680413047, guid: 0780ff1cd71d0448897cd0f61a2f75ed, type: 3}
       propertyPath: m_RootOrder
       value: 6
