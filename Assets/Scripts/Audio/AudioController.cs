@@ -83,6 +83,7 @@ namespace UnityCore
                 m_AudioTable = new Hashtable();
                 m_JobTable = new Hashtable();
                 PopulateAudioTable();
+                PlayAudio(AudioType.Menu_ST, true);
             }
 
             private void Dispose() {

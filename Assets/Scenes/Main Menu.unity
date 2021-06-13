@@ -642,6 +642,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7713672688893311364, guid: 4d33528e792823d49929778b2fdc5bdb, type: 3}
   m_PrefabInstance: {fileID: 240554840}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &244943941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8010824800680413046, guid: 0780ff1cd71d0448897cd0f61a2f75ed, type: 3}
+  m_PrefabInstance: {fileID: 8010824802367216576}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b08872c69bf36b547abfbe846c4e7312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &346583283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1911,6 +1922,7 @@ MonoBehaviour:
   ShipSelect: {fileID: 1256788604}
   LevelSelect: {fileID: 1747240831}
   Credits: {fileID: 481788941}
+  controller: {fileID: 0}
 --- !u!224 &1635315754
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2601,6 +2613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1187898707443466218, guid: f9e747fc452c97746801d64166d657d3, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 244943941}
     - target: {fileID: 1187898707443466219, guid: f9e747fc452c97746801d64166d657d3, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2787,6 +2803,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 8010824800680413045, guid: 0780ff1cd71d0448897cd0f61a2f75ed, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010824800680413046, guid: 0780ff1cd71d0448897cd0f61a2f75ed, type: 3}
+      propertyPath: tracks.Array.data[0].audio.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b7092ab00fb1449049b9d3e802556f3c, type: 3}
     - target: {fileID: 8010824800680413047, guid: 0780ff1cd71d0448897cd0f61a2f75ed, type: 3}
       propertyPath: m_RootOrder
       value: 6
