@@ -1061,6 +1061,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7914426162641027731, guid: 6cc7fbf1c3b05704ba8d105f94a139c6, type: 3}
+      propertyPath: m_Size.y
+      value: 2.4938726
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914426162641027731, guid: 6cc7fbf1c3b05704ba8d105f94a139c6, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0004233718
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914426162641027731, guid: 6cc7fbf1c3b05704ba8d105f94a139c6, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914426162641027731, guid: 6cc7fbf1c3b05704ba8d105f94a139c6, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.83784384
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914426162641027731, guid: 6cc7fbf1c3b05704ba8d105f94a139c6, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 2.4864364
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914426162641027731, guid: 6cc7fbf1c3b05704ba8d105f94a139c6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914426162641027731, guid: 6cc7fbf1c3b05704ba8d105f94a139c6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7914426162641027741, guid: 6cc7fbf1c3b05704ba8d105f94a139c6, type: 3}
       propertyPath: m_Size.x
       value: 0.83784384
