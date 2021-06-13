@@ -36,12 +36,12 @@ public class TugofwarMovement : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.A)) {
-            leftThruster.transform.Rotate(new Vector3(0, 0, 0.5f));
+            leftThruster.transform.Rotate(new Vector3(0, 0, 1f));
             // leftEuler.z += 0.5f;
         }
 
         if (Input.GetKey(KeyCode.D)) {
-            leftThruster.transform.Rotate(new Vector3(0, 0, -0.5f));
+            leftThruster.transform.Rotate(new Vector3(0, 0, -1f));
             // leftEuler.z -= 0.5f;
         }
 
@@ -56,12 +56,12 @@ public class TugofwarMovement : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.LeftArrow)) {
-            rightThruster.transform.Rotate(new Vector3(0, 0, 0.5f));
+            rightThruster.transform.Rotate(new Vector3(0, 0, 1f));
             // rightEuler.z += 0.5f;
         }
 
         if (Input.GetKey(KeyCode.RightArrow)) {
-            rightThruster.transform.Rotate(new Vector3(0, 0, -0.5f));
+            rightThruster.transform.Rotate(new Vector3(0, 0, -1f));
             // rightEuler.z -= 0.5f;
         }
     }
