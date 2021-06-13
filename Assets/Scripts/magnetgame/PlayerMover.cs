@@ -17,7 +17,7 @@ public class PlayerMover : MonoBehaviour
 
     private Rigidbody2D rigidb;
 
-    private float floor = 0.5f;
+    private float floor = 0.25f;
 
     // Start is called before the first frame update
     void Start()
