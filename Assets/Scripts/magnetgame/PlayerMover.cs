@@ -11,13 +11,13 @@ public class PlayerMover : MonoBehaviour
 
     public player p;
 
-    private float PullPower = 20f;
+    private float PullPower = 15f;
 
-    private float PushPower = 20f;
+    private float PushPower = 15f;
 
     private Rigidbody2D rigidb;
 
-    private float floor = 0.5f;
+    private float floor = 0.25f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +26,14 @@ public class PlayerMover : MonoBehaviour
 
         if(!otherPlayer)
         {
-            if (p == player.p1)
-                otherPlayer = GameObject.Find("MagnetP2");
-            else
-                otherPlayer = GameObject.Find("MagnetP1");
+            GameObject[] ships = GameObject.FindGameObjectsWithTag("Ship");
+            foreach (GameObject ship in ships)
+            {
+                if(ship != gameObject)
+                {
+                    otherPlayer = ship;
+                }
+            }
         }
     }
 
