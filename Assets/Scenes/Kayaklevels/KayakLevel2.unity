@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goingUp: 0
-  moveSpeed: 0.012
+  moveSpeed: 0.01
 --- !u!1 &399803842
 GameObject:
   m_ObjectHideFlags: 0
