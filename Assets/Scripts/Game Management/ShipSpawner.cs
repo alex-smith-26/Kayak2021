@@ -68,7 +68,7 @@ public class ShipSpawner : MonoBehaviour {
 			} else if (currentShipType == ShipType.Tug_of_War) {
 				Instantiate(tug_of_war_prefab, positionToSpawn, tug_of_war_prefab.transform.rotation);
 			} else if (currentShipType == ShipType.Magnet) {
-				Vector3 offset = new Vector3(0.5f, 0, 0);
+				Vector3 offset = new Vector3(0.5f, -0.2f, 0);
 				Instantiate(magnet_prefab_1, positionToSpawn - offset, magnet_prefab_1.transform.rotation);
 				Instantiate(magnet_prefab_2, positionToSpawn + offset, magnet_prefab_2.transform.rotation);
 			} else {
